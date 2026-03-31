@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREETECH</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon"><img src="{{ url_for('static', filename='icon 1.png') }}" alt="" width="50"
+                        height="50"></span>
+                <span class="logo-text">TREE<span class="highlight">TECH</span></span>
+            </div>
+            <div class="header-right">
+                <div class="social-icons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="header-cta">
+                    <a href="#" class="btn btn-white open-modal-btn">Apply Now</a>
+                    <a href="tel:6153141420" class="btn btn-primary">(615) 314-1420</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Form overlay -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="placeholder-text">FOTO 1</div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text-block">
+                <p class="pre-title">GROW WITH US</p>
+                <h1 class="main-title">FIELD INSTALLATION SPECIALISTS</h1>
+                <ul class="hero-list">
+                    <li>Competitive Weekly Pay</li>
+                    <li>24/7 Supervisor Support</li>
+                    <li>Real Career Advancement</li>
+                    <li>Company Vehicle Provided</li>
+                </ul>
+                <div class="hero-buttons">
+                    <a href="#about-section" class="btn btn-white-outline"><i class="fas fa-info-circle"></i> Learn
+                        More</a>
+                    <a href="#apply" class="btn btn-primary"><i class="fas fa-check"></i> Join Us</a>
+                </div>
+            </div>
+
+            <div class="hero-form-block" id="apply">
+                <div class="form-header">
+                    <h3>LET'S GET STARTED!</h3>
+                </div>
+                <form action="/submit" method="POST" class="hero-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="First Name Last Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="experience" placeholder="Experience" rows="2"></textarea>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="data-consent" required>
+                        <div class="checkbox-label-block">
+                            <label for="data-consent">I AGREE TO DATA PROCESSING</label>
+                            <p class="small-text">By checking this box, you consent to our privacy policy and terms.</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Struct -->
+    <section class="about-section" id="about-section">
+        <div class="container about-grid">
+            <div class="about-image">
+                <div class="placeholder-box">FOTO 2</div>
+            </div>
+            <div class="about-text">
+                <span class="section-label">Who We Are</span>
+                <h2>BUILDING THE FUTURE OF CONNECTIVITY</h2>
+                <p>
+                    TREETECH is a leading fulfillment partner for major telecommunications providers.
+                    We specialize in residential and commercial installations, ensuring that every connection
+                    is fast, meaningful, and reliable.
+                </p>
+                <p>
+                    Our team of dedicated professionals is driven by a commitment to quality and safety.
+                    We don't just clear tickets; we build lasting infrastructure.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="#applyModal" class="btn-link open-modal-btn">Join Our Team <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Columns (Safety, Quality, Simplicity) -->
+    <section class="values-section">
+        <div class="value-col">
+            <div class="value-bg">
+                <div class="placeholder-text-small">FOTO 3</div>
+            </div>
+            <div class="value-overlay">
+                <h3>SAFETY</h3>
+            </div>
+        </div>
+        <div class="value-col active">
+            <div class="value-bg">
+                <div class="placeholder-text-small">FOTO 4</div>
+            </div>
+            <div class="value-overlay">
+                <h3>QUALITY</h3>
+            </div>
+        </div>
+        <div class="value-col">
+            <div class="value-bg">
+                <div class="placeholder-text-small">FOTO 5</div>
+            </div>
+            <div class="value-overlay">
+                <h3>SIMPLICITY</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="services-section">
+        <div class="container services-layout">
+            <!-- Left Column: Info & Image -->
+            <div class="services-info">
+                <h2 class="section-heading">Our <span class="highlight-bg">Services</span></h2>
+                <p class="services-desc">
+                    TREETECH is a national provider of fulfillment and project management services.
+                    We deliver top-tier installation solutions with a focus on quality, safety, and customer
+                    satisfaction.
+                </p>
+                <div class="service-feature-img">
+                    FOTO 6 (Technician)
+                </div>
+            </div>
+
+            <!-- Right Column: Grid -->
+            <div class="services-grid">
+                <div class="service-item">
+                    <span class="service-icon">🛠</span>
+                    <h4>Cable TV</h4>
+                    <p class="small-text text-center" style="color:#777;">Advanced video system configurations.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">🚀</span>
+                    <h4>Internet</h4>
+                    <p class="small-text text-center" style="color:#777;">High-speed fiber & coax installations.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">📞</span>
+                    <h4>VOIP</h4>
+                    <p class="small-text text-center" style="color:#777;">Clear digital voice solutions.</p>
+                </div>
+                <div class="service-item">
+                    <span class="service-icon">🔒</span>
+                    <h4>Security</h4>
+                    <p class="small-text text-center" style="color:#777;">Smart home & automation integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Columns Info (Experienced, No Experience, Referral) -->
+    <section class="info-columns-section">
+        <div class="container info-grid">
+            <!-- Col 1 -->
+            <div class="info-col">
+                <h3 class="info-header">Experienced?</h3>
+                <ul class="check-list-small">
+                    <li>Highest rates on the market!</li>
+                    <li>Weekly payments!</li>
+                    <li>Reliable support from our supervisors!</li>
+                </ul>
+            </div>
+            <!-- Col 2 -->
+            <div class="info-col">
+                <h3 class="info-header">Don't have any experience?</h3>
+                <ul class="check-list-small">
+                    <li>We'll pay $500 for your training time!</li>
+                    <li>Company's vehicle free for 2 weeks!</li>
+                    <li>Complete uniform provided!</li>
+                </ul>
+            </div>
+            <!-- Col 3 -->
+            <div class="info-col">
+                <h3 class="info-header">Referral program</h3>
+                <ul class="check-list-small">
+                    <li>$400 for a beginner technician</li>
+                    <li>$400 for an experienced technician</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner">
+        <div class="container text-center">
+            <h2 class="cta-title">Come In And Let’s Get Talking!</h2>
+            <p class="cta-subtitle">We are excited to take you on as a part of our team and will do all that is in our
+                power to meet, if not exceed, your expectations.</p>
+            <a href="#apply" class="btn btn-dark-outline">🤝 Welcome On Board</a>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Footer -->
+    <footer class="contact-footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <span class="logo-icon">📡</span> TREETECH
+                </div>
+                <p class="footer-desc">
+                    TreeTech Communications LLC is a national provider of fulfillment, construction and project
+                    management services to the cable and telecommunications industries.
+                </p>
+                <div class="contact-rows">
+                    <div class="c-row">
+                        <span class="c-icon-small">📍</span> Nashville, TN
+                    </div>
+                    <div class="c-row">
+                        <span class="c-icon-small">📞</span> +1 (615) 314-1420
+                    </div>
+                    <div class="c-row">
+                        <span class="c-icon-small">✉</span> hr.treetech@terokar.com
+                    </div>
+                </div>
+                <div class="social-row">
+                    <span></span> <span></span> <span></span>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h2 class="footer-heading">Contact Us</h2>
+                <form action="/submit" method="POST" class="footer-form">
+                    <div class="footer-input-group">
+                        <span class="input-icon">👤</span>
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="footer-input-group">
+                        <span class="input-icon">📞</span>
+                        <input type="tel" name="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="footer-input-group">
+                        <span class="input-icon">@</span>
+                        <input type="email" name="email" placeholder="Email (Optional)">
+                    </div>
+                    <div class="footer-input-group">
+                        <span class="input-icon">✎</span>
+                        <textarea name="message" placeholder="Text" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-white-pill">SEND ➤</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright-row">
+            <div class="container">
+                <p>&copy; 2026 TreeTech. All rights reserved.</p>
+                <div class="policy-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Services</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Apply Modal -->
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="hero-form-block" style="margin: 0; box-shadow: none; width: 100%; max-width: 450px;">
+                <div class="form-header">
+                    <h3>LET'S GET STARTED!</h3>
+                </div>
+                <form action="/submit" method="POST" class="hero-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="First Name Last Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="experience" placeholder="Experience" rows="2"></textarea>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="data-consent-modal" required>
+                        <div class="checkbox-label-block">
+                            <label for="data-consent-modal">I AGREE TO DATA PROCESSING</label>
+                            <p class="small-text">By checking this box, you consent to our privacy policy and terms.</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successAnimModal" class="modal" style="display: none; z-index: 10000;">
+        <div class="modal-content" style="text-align: center; max-width: 400px; padding: 40px; border-radius: 20px;">
+            <div class="success-animation-container">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h2 style="margin-top: 20px; color: #1CEDC8;">Thank You!</h2>
+            <p style="color: #bbb; font-size: 16px; margin-top: 10px;">We have received your application. We will contact you soon!</p>
+            <button type="button" class="btn btn-primary" id="closeSuccessAnim" style="margin-top: 20px; padding: 10px 30px;">Close</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js', v='3') }}"></script>
+</body>
+
+</html>

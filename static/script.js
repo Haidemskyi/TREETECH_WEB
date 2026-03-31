@@ -20,6 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Mobile Hamburger Menu ---
+    const hamburger = document.getElementById('hamburger-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
+
     // --- AJAX Form Submission with Animation ---
     const forms = document.querySelectorAll('form[action="/submit"]');
     const successAnimModal = document.getElementById('successAnimModal');

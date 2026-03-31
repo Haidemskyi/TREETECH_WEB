@@ -12,17 +12,26 @@
 
 <body>
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon"><img src="{{ url_for('static', filename='icon 1.png') }}" alt="" width="50"
-                        height="50"></span>
-                <span class="logo-text">TREE<span class="highlight">TECH</span></span>
+        <div class="header-container container">
+            <a href="/" class="logo" style="text-decoration: none; color: white;">
+                <div class="logo-icon">
+                    <img src="{{ url_for('static', filename='icon 1.png') }}" alt="TREETECH Logo">
+                </div>
+                <div class="logo-text">TREE<span class="highlight">TECH</span></div>
+            </a>
+            
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="header-right">
+
+            <div class="header-right" id="mobile-menu">
                 <div class="social-icons">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <!-- Example icons, using text as placeholder to avoid external deps if not loaded -->
+                    <a href="#" style="color: inherit; text-decoration: none;">📘</a>
+                    <a href="#" style="color: inherit; text-decoration: none;">📸</a>
+                    <a href="#" style="color: inherit; text-decoration: none;">🐦</a>
                 </div>
                 <div class="header-cta">
                     <a href="#" class="btn btn-white open-modal-btn">Apply Now</a>
@@ -289,9 +298,9 @@
 
     <!-- Apply Modal -->
     <div id="applyModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="hero-form-block" style="margin: 0; box-shadow: none; width: 100%; max-width: 450px;">
+        <div class="modal-content" style="padding:0; background:transparent; width: 95%; max-width: 450px; position:relative;">
+            <div class="hero-form-block" style="margin: 0 auto; box-shadow: none; width: 100%; max-width: 100%; position: relative; box-sizing: border-box;">
+                <span class="close-modal" style="position: absolute; right: 20px; top: 15px; font-size: 35px; line-height:1; font-weight: bold; cursor: pointer; color: #888; z-index: 20;">&times;</span>
                 <div class="form-header">
                     <h3>LET'S GET STARTED!</h3>
                 </div>

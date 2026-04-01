@@ -415,7 +415,7 @@ header {
 }
 
 .about-image::after {
-    content: 'EST. 2024';
+    content: 'EST. 2021';
     position: absolute;
     bottom: -20px;
     right: -20px;

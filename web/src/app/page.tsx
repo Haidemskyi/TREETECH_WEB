@@ -74,7 +74,7 @@ export default function Home() {
               <img src="/icon 1.png" alt="" width="50" height="50" />
             </span>
             <span className="logo-text">
-              TREE<span className="highlight">TECH</span>
+              Tree<span className="highlight">Tech</span>
             </span>
           </div>
           <div className="header-right">
@@ -111,7 +111,6 @@ export default function Home() {
               <li>Competitive Weekly Pay</li>
               <li>24/7 Supervisor Support</li>
               <li>Real Career Advancement</li>
-              <li>Company Vehicle Provided</li>
             </ul>
             <div className="hero-buttons">
               <a href="#about-section" className="btn btn-white-outline">
@@ -199,7 +198,7 @@ export default function Home() {
             <span className="section-label">Who We Are</span>
             <h2>BUILDING THE FUTURE OF CONNECTIVITY</h2>
             <p>
-              TREETECH is a leading fulfillment partner for major
+              TreeTech is a leading fulfillment partner for major
               telecommunications providers. We specialize in residential and
               commercial installations, ensuring that every connection is fast,
               meaningful, and reliable.
@@ -258,7 +257,7 @@ export default function Home() {
               Our <span className="highlight-bg">Services</span>
             </h2>
             <p className="services-desc">
-              TREETECH is a national provider of fulfillment and project
+              TreeTech is a national provider of fulfillment and project
               management services. We deliver top-tier installation solutions
               with a focus on quality, safety, and customer satisfaction.
             </p>
@@ -324,16 +323,14 @@ export default function Home() {
           <div className="info-col">
             <h3 className="info-header">Don't have any experience?</h3>
             <ul className="check-list-small">
-              <li>We'll pay $500 for your training time!</li>
-              <li>Company's vehicle free for 2 weeks!</li>
+              <li>Paid training time provided!</li>
               <li>Complete uniform provided!</li>
             </ul>
           </div>
           <div className="info-col">
             <h3 className="info-header">Referral program</h3>
             <ul className="check-list-small">
-              <li>$400 for a beginner technician</li>
-              <li>$400 for an experienced technician</li>
+              <li>Referral bonuses available for our employees!</li>
             </ul>
           </div>
         </div>
@@ -361,10 +358,10 @@ export default function Home() {
         <div className="container footer-grid">
           <div className="footer-left">
             <div className="footer-brand">
-              <span className="logo-icon">📡</span> TREETECH
+              <span className="logo-icon">📡</span> TreeTech
             </div>
             <p className="footer-desc">
-              TreeTech Communications LLC is a national provider of fulfillment,
+              TreeTech Communication is a national provider of fulfillment,
               construction and project management services to the cable and
               telecommunications industries.
             </p>

@@ -38,13 +38,12 @@ def submit():
         location = request.form.get('location')
 
         # --- Send data to n8n Webhook ---
-        webhook_url = 'https://n8n.control-app.work/webhook-test/14fd8c81-e557-4898-8cf3-0720e3321dc0'
+        webhook_url = 'https://n8n.control-app.work/webhook/14fd8c81-e557-4898-8cf3-0720e3321dc0'
         webhook_data = {
             'name': name,
             'phone': phone,
             'email': email,
-            'experience': experience,
-            'location': location
+            'experience': experience
         }
         try:
             json_data = json.dumps(webhook_data).encode('utf-8')

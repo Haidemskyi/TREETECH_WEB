@@ -43,7 +43,8 @@ def submit():
             'name': name,
             'phone': phone,
             'email': email,
-            'experience': experience
+            'experience': experience,
+            'location': location
         }
         try:
             json_data = json.dumps(webhook_data).encode('utf-8')

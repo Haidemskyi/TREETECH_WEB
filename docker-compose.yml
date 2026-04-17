@@ -5,28 +5,6 @@ services:
     build: .
     ports:
       - "5001:5000"
-    environment:
-      - DB_HOST=db
-      - DB_USER=treetech_user
-      - DB_PASSWORD=treetech_pass
-      - DB_NAME=treetech_db
     volumes:
       - .:/app
-    depends_on:
-      - db
     restart: always
-
-  db:
-    image: mysql:8.0
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=treetech_db
-      - MYSQL_USER=treetech_user
-      - MYSQL_PASSWORD=treetech_pass
-    volumes:
-      - ./schema.sql:/docker-entrypoint-initdb.d/init.sql
-      - db_data:/var/lib/mysql
-    restart: always
-
-volumes:
-  db_data:

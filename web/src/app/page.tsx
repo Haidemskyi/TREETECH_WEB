@@ -100,9 +100,7 @@ export default function Home() {
 
       {/* Hero Section with Form overlay */}
       <section className="hero-section">
-        <div className="hero-bg">
-          <div className="placeholder-text">FOTO 1</div>
-        </div>
+        <div className="hero-bg"></div>
         <div className="container hero-content">
           <div className="hero-text-block">
             <p className="pre-title">GROW WITH US</p>
@@ -131,14 +129,14 @@ export default function Home() {
             ) : (
               <>
                 <div className="form-header">
-                  <h3>LET'S GET STARTED!</h3>
+                  <h3>LET&apos;S GET STARTED!</h3>
                 </div>
                 <form action={handleSubmit} className="hero-form">
                   <div className="form-row">
                     <input
                       type="text"
                       name="name"
-                      placeholder="First Name Last Name"
+                      placeholder="Full Name"
                       required
                     />
                   </div>
@@ -192,7 +190,7 @@ export default function Home() {
       <section className="about-section" id="about-section">
         <div className="container about-grid">
           <div className="about-image">
-            <div className="placeholder-box">FOTO 2</div>
+            <img src="/assets/quality_photo.png" alt="TreeTech field installation team" className="section-photo" />
           </div>
           <div className="about-text">
             <span className="section-label">Who We Are</span>
@@ -205,7 +203,7 @@ export default function Home() {
             </p>
             <p>
               Our team of dedicated professionals is driven by a commitment to
-              quality and safety. We don't just clear tickets; we build lasting
+              quality and safety. We don&apos;t just clear tickets; we build lasting
               infrastructure.
             </p>
             <div style={{ marginTop: "30px" }}>
@@ -221,33 +219,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="values-section">
-        <div className="value-col">
-          <div className="value-bg">
-            <div className="placeholder-text-small">FOTO 3</div>
+        {/* Values Section */}
+        <section className="values-section">
+          <div className="value-col">
+            <div className="value-bg">
+              <img src="/assets/safety_photo.png" alt="Safety" className="value-image" />
+            </div>
+            <div className="value-overlay">
+              <h3>SAFETY</h3>
+              <h4>Safe procedures on every job.</h4>
+              <p>Our crews follow clear installation standards, use proper equipment, and prioritize jobsite safety from start to finish.</p>
+            </div>
           </div>
-          <div className="value-overlay">
-            <h3>SAFETY</h3>
+          <div className="value-col active">
+            <div className="value-bg">
+              <img src="/assets/quality_photo.png" alt="Quality" className="value-image" />
+            </div>
+            <div className="value-overlay">
+              <h3>QUALITY</h3>
+              <h4>Reliable work you can count on.</h4>
+              <p>We focus on clean installs, strong communication, and consistent service for every customer and project partner.</p>
+            </div>
           </div>
-        </div>
-        <div className="value-col active">
-          <div className="value-bg">
-            <div className="placeholder-text-small">FOTO 4</div>
+          <div className="value-col">
+            <div className="value-bg">
+              <img src="/assets/simplicity_photo.png" alt="Simplicity" className="value-image" />
+            </div>
+            <div className="value-overlay">
+              <h3>SIMPLICITY</h3>
+              <h4>Straightforward process, dependable results.</h4>
+              <p>From scheduling to completion, we keep the workflow organized, efficient, and easy to manage.</p>
+            </div>
           </div>
-          <div className="value-overlay">
-            <h3>QUALITY</h3>
-          </div>
-        </div>
-        <div className="value-col">
-          <div className="value-bg">
-            <div className="placeholder-text-small">FOTO 5</div>
-          </div>
-          <div className="value-overlay">
-            <h3>SIMPLICITY</h3>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section className="services-section">
@@ -261,7 +265,9 @@ export default function Home() {
               management services. We deliver top-tier installation solutions
               with a focus on quality, safety, and customer satisfaction.
             </p>
-            <div className="service-feature-img">FOTO 6 (Technician)</div>
+            <div className="service-feature-img">
+              <img src="/assets/cable_burial_photo.png" alt="Technician burying underground cable" />
+            </div>
           </div>
 
           <div className="services-grid">
@@ -321,10 +327,10 @@ export default function Home() {
             </ul>
           </div>
           <div className="info-col">
-            <h3 className="info-header">Don't have any experience?</h3>
+            <h3 className="info-header">Don&apos;t have any experience?</h3>
             <ul className="check-list-small">
               <li>Paid training time provided!</li>
-              <li>Complete uniform provided!</li>
+              <li>Uniform and tools</li>
             </ul>
           </div>
           <div className="info-col">
@@ -386,7 +392,7 @@ export default function Home() {
             <form action={handleSubmit} className="footer-form">
               <div className="footer-input-group">
                 <span className="input-icon">👤</span>
-                <input type="text" name="name" placeholder="Name" required />
+                <input type="text" name="name" placeholder="Full Name" required />
               </div>
               <div className="footer-input-group">
                 <span className="input-icon">@</span>
@@ -394,7 +400,7 @@ export default function Home() {
               </div>
               <div className="footer-input-group">
                 <span className="input-icon">✎</span>
-                <textarea name="message" placeholder="Text" rows={4}></textarea>
+                <textarea name="message" placeholder="Expirience" rows={4}></textarea>
               </div>
               <button type="submit" className="btn btn-white-pill" disabled={isSubmitting}>
                 SEND ➤
@@ -434,14 +440,14 @@ export default function Home() {
               ) : (
                 <>
                   <div className="form-header">
-                    <h3>LET'S GET STARTED!</h3>
+                    <h3>LET&apos;S GET STARTED!</h3>
                   </div>
                   <form action={handleSubmit} className="hero-form">
                     <div className="form-row">
                       <input
                         type="text"
                         name="name"
-                        placeholder="First Name Last Name"
+                        placeholder="Full Name"
                         required
                       />
                     </div>

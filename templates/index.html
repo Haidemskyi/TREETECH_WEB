@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TreeTech</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='5') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='6') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap"
         rel="stylesheet">
 </head>
@@ -42,9 +42,7 @@
 
     <!-- Hero Section with Form overlay -->
     <section class="hero-section">
-        <div class="hero-bg">
-            <div class="placeholder-text">FOTO 1</div>
-        </div>
+        <div class="hero-bg"></div>
         <div class="container hero-content">
             <div class="hero-text-block">
                 <p class="pre-title">GROW WITH US</p>
@@ -67,7 +65,7 @@
                 </div>
                 <form action="/submit" method="POST" class="hero-form">
                     <div class="form-row">
-                        <input type="text" name="name" placeholder="First Name Last Name" required>
+                        <input type="text" name="name" placeholder="Full Name" required>
                     </div>
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email Address">
@@ -97,7 +95,7 @@
     <section class="about-section" id="about-section">
         <div class="container about-grid">
             <div class="about-image">
-                <div class="placeholder-box">FOTO 2</div>
+                <img src="{{ url_for('static', filename='assets/quality_photo.png') }}" alt="TreeTech field installation team" class="section-photo">
             </div>
             <div class="about-text">
                 <span class="section-label">Who We Are</span>
@@ -123,7 +121,7 @@
     <section class="values-section">
         <div class="value-col">
             <div class="value-bg">
-                <div class="placeholder-text-small">FOTO 3</div>
+                <img src="{{ url_for('static', filename='assets/safety_photo.png') }}" alt="Safe field installation work" class="value-image">
             </div>
             <div class="value-overlay">
                 <h3>SAFETY</h3>
@@ -131,7 +129,7 @@
         </div>
         <div class="value-col active">
             <div class="value-bg">
-                <div class="placeholder-text-small">FOTO 4</div>
+                <img src="{{ url_for('static', filename='assets/quality_photo.png') }}" alt="Quality telecommunications installation" class="value-image">
             </div>
             <div class="value-overlay">
                 <h3>QUALITY</h3>
@@ -139,7 +137,7 @@
         </div>
         <div class="value-col">
             <div class="value-bg">
-                <div class="placeholder-text-small">FOTO 5</div>
+                <img src="{{ url_for('static', filename='assets/simplicity_photo.png') }}" alt="Organized telecom connection work" class="value-image">
             </div>
             <div class="value-overlay">
                 <h3>SIMPLICITY</h3>
@@ -159,7 +157,7 @@
                     satisfaction.
                 </p>
                 <div class="service-feature-img">
-                    FOTO 6 (Technician)
+                    <img src="{{ url_for('static', filename='assets/cable_burial_photo.png') }}" alt="Technician burying underground cable">
                 </div>
             </div>
 
@@ -206,7 +204,7 @@
                 <h3 class="info-header">Don't have any experience?</h3>
                 <ul class="check-list-small">
                     <li>Paid training time provided!</li>
-                    <li>Complete uniform provided!</li>
+                    <li>Uniform and tools</li>
                 </ul>
             </div>
             <!-- Col 3 -->
@@ -263,7 +261,7 @@
                 <form action="/submit" method="POST" class="footer-form">
                     <div class="footer-input-group">
                         <span class="input-icon">👤</span>
-                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="name" placeholder="Full Name" required>
                     </div>
                     <div class="footer-input-group">
                         <span class="input-icon">📞</span>
@@ -275,7 +273,7 @@
                     </div>
                     <div class="footer-input-group">
                         <span class="input-icon">✎</span>
-                        <textarea name="message" placeholder="Text" rows="4"></textarea>
+                        <textarea name="message" placeholder="Expirience" rows="4"></textarea>
                     </div>
                     <button type="submit" class="btn btn-white-pill">SEND ➤</button>
                 </form>
@@ -305,7 +303,7 @@
                 </div>
                 <form action="/submit" method="POST" class="hero-form">
                     <div class="form-row">
-                        <input type="text" name="name" placeholder="First Name Last Name" required>
+                        <input type="text" name="name" placeholder="Full Name" required>
                     </div>
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email Address">

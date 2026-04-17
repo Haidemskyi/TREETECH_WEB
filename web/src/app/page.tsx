@@ -266,7 +266,7 @@ export default function Home() {
               with a focus on quality, safety, and customer satisfaction.
             </p>
             <div className="service-feature-img">
-              <img src="/assets/cable_burial_photo.png" alt="Technician burying underground cable" />
+              <img src="/assets/drop_cable_photo.png" alt="Technician pulling orange RG-6 drop cable" />
             </div>
           </div>
 

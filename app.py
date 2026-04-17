@@ -33,11 +33,19 @@ def submit():
             req = urllib.request.Request(webhook_url, data=json_data)
             req.add_header('Content-Type', 'application/json')
             req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
-            urllib.request.urlopen(req, timeout=5)
+            
+            with urllib.request.urlopen(req, timeout=5) as response:
+                status = response.getcode()
+                resp_body = response.read().decode('utf-8')
+                print(f"n8n webhook response: {status} - {resp_body}")
+                
             flash('Ваша заявка успешно отправлена!', 'success')
+        except urllib.error.HTTPError as e:
+            print(f"n8n webhook HTTP Error: {e.code} - {e.reason}")
+            flash('Ошибка при уведомлении (HTTP).', 'warning')
         except Exception as e:
             print(f"Error sending to n8n webhook: {e}")
-            flash('Ваша заявка отправлена, но возникла задержка в уведомлении.', 'warning')
+            flash('Ошибка при отправке уведомления.', 'danger')
         
     return redirect(url_for('index'))
 

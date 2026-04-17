@@ -1,7 +1,9 @@
 import json
 import urllib.request
+import urllib.error
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 import os
+import sys
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Change this in production
@@ -12,6 +14,7 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
+    print("Submit route triggered", flush=True)
     if request.method == 'POST':
         name = request.form['name']
         phone = request.form['phone']
@@ -29,6 +32,7 @@ def submit():
             'location': location
         }
         try:
+            print(f"Sending to n8n: {webhook_data}", flush=True)
             json_data = json.dumps(webhook_data).encode('utf-8')
             req = urllib.request.Request(webhook_url, data=json_data)
             req.add_header('Content-Type', 'application/json')
@@ -37,14 +41,14 @@ def submit():
             with urllib.request.urlopen(req, timeout=5) as response:
                 status = response.getcode()
                 resp_body = response.read().decode('utf-8')
-                print(f"n8n webhook response: {status} - {resp_body}")
+                print(f"n8n webhook response: {status} - {resp_body}", flush=True)
                 
             flash('Ваша заявка успешно отправлена!', 'success')
         except urllib.error.HTTPError as e:
-            print(f"n8n webhook HTTP Error: {e.code} - {e.reason}")
+            print(f"n8n webhook HTTP Error: {e.code} - {e.reason}", flush=True)
             flash('Ошибка при уведомлении (HTTP).', 'warning')
         except Exception as e:
-            print(f"Error sending to n8n webhook: {e}")
+            print(f"Error sending to n8n webhook: {e}", flush=True)
             flash('Ошибка при отправке уведомления.', 'danger')
         
     return redirect(url_for('index'))
